@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Anabel Reining</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="style/mini5.css" rel="stylesheet">
+  </head>
+  <!--getTime() sets clock and icon dyanamically in hobbies tab-->
+  <body onload="getTime();">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!--collapsable nav bar-->
+    <nav class="navbar navbar-expand-lg navbar-expand-md bg-white">
+      <div class="container-fluid">
+        <!--Logo-->
+        <a class="navbar-brand" href="#">ABKR</a>
+        <!--Navbar toggler button-->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <!--Navbar toggler icon-->
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <!-- List containing navbar content -->
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <!--Links to home (landing) page-->
+              <!--TODO: Stop links from jumping on first click-->
+              <a class="nav-link active text-muted" id="menu0" onclick="showContent('menu0', 'content0')" style="margin-right: 20px;">Home</a>
+            </li>
+            <li class ="nav-item">
+              <!--Links to hobbies page-->
+              <a class="nav-link active text-muted" id="menu1" onclick="showContent('menu1', 'content1')" style="margin-right: 20px;">Hobbies</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active text-muted" id="clock" style="margin-right: 20px;" src="#"></a>
+            </li>
+            <li class="nav-item col-lg-1 col-md-1 col-sm-2">
+              <img id="icon" src="photos/noon.png" width="100%">
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div id="content0" style="display:block">
+      <!--Intro-->
+      <div class="row">
+        <div class="col-lg-1 col-md-1"></div>
+        <div class="col-lg-6 col-md-6">
+          <h1>Anabel Reining</h1>
+          <h1><small class="text-muted">Computer Science and Geography at McGill University</small></h1>
+        </div>
+      </div>
+      
+      <div class="row">
+        <!--Education (Carousel)-->
+        <div class="col-lg-1 col-md-1 col-sm-1"></div>
+        <div class="col-lg-5 col-md-5">
+          <h2>Education</h2>
+          <div id="carouselEducation" class="carousel slide">
+            <div class="carousel-inner">
+              <!--Item 1-->
+              <div class="carousel-item active">
+                <div id="mcgill" class="card">
+                  <img class="card-img-top" src="photos/mcgill_home.png">
+                  <div class="card-body">
+                    <h5 class="card-title">McGill University</h5>
+                    <h6>Major: Computer Science</h6>
+                    <p>Degree anticipated: June 2024</p>
+                    <h6>Minor: Geographic Information Systems</h6>
+                    <h6>Minor: Hispanic Studies</h6>
+                  </div>
+                </div>
+              </div>
+              <!--Item 2-->
+              <div class="carousel-item">
+                <div id="uqac" class="card">
+                  <img class="card-img-top" src="photos/uqac.png">
+                  <div class="card-body">
+                    <h5 class="card-title">UQAC</h5>
+                    <h6>McGill UQAC Explore Program 2023</h6>
+                    <p>Summer French immersion program</p>
+                  </div>
+                </div>
+              </div>
+              <!--Item 3-->
+              <div class="carousel-item">
+                <div id="thetford" class="card">
+                  <img class="card-img-top" src="photos/thetford.png">
+                  <div class="card-body">
+                    <h5 class="card-title">Thetford Academy</h5>
+                    <h6>Diploma Recieved: June 2019</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Carousel controls-->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselEducation" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselEducation" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+        <!--Experience (Accordion)-->
+        <div class="accordion col-lg-5 col-md-5" id="accordion_experience">
+          <h2>Experience</h2>
+          <!--Accordion containing my experience-->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <!--Button-->
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                SURA Summer 2022
+              </button>
+            </h2>
+            <!--Content-->
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordion_experience">
+              <div class="row">
+                <!--Link to project-->
+                <div>
+                  <a href="https://areining12.github.io/EScooterUseGermany/" class="link-secondary">
+                    <img src="photos/echarts_link.png" width="100%">
+                  </a>
+                </div>
+                <div>
+                  <p><small>Click image to see my results!</small></p>
+                  <h3>McGill Department of Geography</h3>
+                  <p>Worked with a supervisor to design and complete a 15-week research project on dockless e-scooter usage in three German cities. Used python to complete statistical analysis of hourly e-scooter usage in each district of each city, ArcMap to visualize results of analysis, and Leaflet software in conjunction with JavaScript and HTML to create an interactive webpage displaying the results of my research.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Item two-->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Research Assistant Winter 2022
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordion_experience">
+              <div class="accordion=body">
+                <h4>Research Assistant</h4>
+                <h5>Platial Analysis Lab, Mcgill University</h5>
+                <p>I worked as a research assistant on a project analyzing dockless bike usage in cities around the world. Used python to analyze dynamic web data from various sources. Found and compiled new data sources. Kept many sources and results organized. Collaborated with other research assistants to troubleshoot and create functional code.</p>
+              </div>
+            </div>
+          </div>
+          <!--Item three-->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Research Internship Summer 2021
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordion_experience">
+              <div class="accordion=body">
+                <h4>Research Intern </h4>
+                <h5>Transplant Surgery Department, Dartmouth Hitchcock Medical Center</h5>
+                <p>I contributed to a research project on the efficacy of the COVID-19 vaccines in immunosuppressed patients. Used python to run statistical analysis of datasets and visualize findings. Collaborated with others to ensure accurate results. Contributed to the project of digitizing DHMCs patient medical records. Efficiently navigated large databases to compile patient data.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-1 col-md-1 col-sm-1"></div>
+      </div>
+    </div>
+    <div id="content1" style="display:none">
+      <div class="row">
+        <div class="col-lg-1 col-md-1"></div>
+        <div class="col-lg-6 col-md-6">
+          <h1>Anabel Reining</h1>
+          <h4><small class="text-muted">When I'm not studying, I enjoy trying out new coffee shops, baking, and hanging out with dogs</small></h4>
+        </div>
+        <div class="col-lg-3 col-md-3"></div>
+        
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <img id="photo1" class="photo" onmouseenter="flip('photo1', 'photos/cake_1.jpg')" onmouseleave="flip_again('photo1', 'photos/coffee_6.jpg')" src="photos/coffee_6.JPG" style="width:80%">
+          <img id="photo3" class="photo" src="photos/coffee_2.jpg" onmouseenter="flip('photo3', 'photos/IMG_6056.jpg')" onmouseleave="flip_again('photo3', 'photos/coffee_2.jpg')" style="width:80%">
+          <img id="photo4" class="photo" src="photos/dog_2.jpg" onmouseenter="flip('photo4', 'photos/dog_5.jpg')" onmouseleave="flip_again('photo4', 'photos/dog_2.jpg')" style="width:80%">
+          <!--Only displayed on medium and small screens-->
+          <img id="photo11" class="photo d-lg-none" onmouseenter="flip('photo11', 'photos/cinnamon_roll.jpg')" onmouseleave="flip_again('photo11', 'photos/IMG_1259.jpg')" src="photos/IMG_1259.JPG" style="width:80%">
+          <!--Only displayed on small screens-->
+          <img id="photo9" class="photo d-md-none" onmouseenter="flip('photo9', 'photos/food_1.jpg')" onmouseleave="flip_again('photo9', 'photos/coffee_1.jpg')" src="photos/coffee_1.jpg" style="width:80%">
+          <img id="photo8" class="photo d-md-none" onmouseenter="flip('photo8', 'photos/dog_6.jpg')" onmouseleave="flip_again('photo8', 'photos/coffee_3.jpg')" src="photos/coffee_3.jpg" style="width:80%">
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <img id="photo2" class="photo" onmouseenter="flip('photo2', 'photos/coffee_3.jpg')" onmouseleave="flip_again('photo2', 'photos/dog_6.jpg')" src="photos/dog_6.jpg" style="width:80%">
+          <img id="photo6" class="photo" onmouseenter="flip('photo6', 'photos/dog_3.jpg')" onmouseleave="flip_again('photo6', 'photos/cake_2.jpg')" src="photos/cake_2.jpg" style="width:80%">
+          <img id="photo7" class="photo" onmouseenter="flip('photo7', 'photos/coffee_4.jpg')" onmouseleave="flip_again('photo7', 'photos/IMG_6054.jpg')" src="photos/IMG_6054.JPG" style="width:80%">
+          <!--Only displayed on medium and small screens-->
+          <img id="photo12" class="photo d-lg-none" src="photos/pumpkin.jpg" onmouseenter="flip('photo12', 'photos/dog_3.jpg')" onmouseleave="flip_again('photo12', 'photos/pumpkin.jpg')" style="width:80%">
+          <!--Only displayed on small screens-->
+          <img id="photo10" class="photo d-md-none" onmouseenter="flip('photo10', 'photos/coffee_5.jpg')" onmouseleave="flip_again('photo10', 'photos/dog_1.jpg')" src="photos/dog_1.jpg" style="width:80%">
+          <img id="photo13" class="photo d-md-none" onmouseenter="flip('photo13', 'photos/dog_4.jpg')" onmouseleave="flip_again('photo13', 'photos/cinnamon_roll.jpg')" src="photos/cinnamon_roll.jpg" style="width:80%">
+        </div>
+
+        <!--Only visible on medium screens and above-->
+          <div class="col-lg-3 col-md-4 d-none d-md-block">
+            <img id="photo14" class="photo" onmouseenter="flip('photo14', 'photos/food_1.jpg')" onmouseleave="flip_again('photo14', 'photos/coffee_1.jpg')" src="photos/coffee_1.jpg" style="width:80%">
+            <img id="photo15" class="photo" onmouseenter="flip('photo15', 'photos/coffee_5.jpg')" onmouseleave="flip_again('photo15', 'photos/dog_1.jpg')" src="photos/dog_1.jpg" style="width:80%">
+            <img id="photo16" class="photo" onmouseenter="flip('photo16', 'photos/cinnamon_roll.jpg')" onmouseleave="flip_again('photo16', 'photos/IMG_1259.jpg')" src="photos/IMG_1259.JPG" style="width:80%">
+            <!--Only displayed on medium and screens-->
+            <img id="photo17" class="photo" onmouseenter="flip('photo17', 'photos/dog_4.jpg')" onmouseleave="flip_again('photo17', 'photos/cinnamon_roll.jpg')" src="photos/cinnamon_roll.jpg" style="width:80%">
+
+          </div>
+          <!--Only shows on large sceens and above-->
+          <div class="d-none d-lg-block col-lg-3">
+            <img id="photo18" class="photo" onmouseenter="flip('photo18', 'photos/dog_6.jpg')" onmouseleave="flip_again('photo18', 'photos/coffee_3.jpg')" src="photos/coffee_3.jpg" style="width:80%">
+            <img id="photo19" class="photo" src="photos/pumpkin.jpg" onmouseenter="flip('photo19', 'photos/dog_3.jpg')" onmouseleave="flip_again('photo19', 'photos/pumpkin.jpg')" style="width:80%">
+            <img id="photo20" class="photo" onmouseenter="flip('photo20', 'photos/dog_4.jpg')" onmouseleave="flip_again('photo20', 'photos/cinnamon_roll.jpg')" src="photos/cinnamon_roll.jpg" style="width:80%">
+          </div>
+
+      </div>
+    </div>
+
+    <!--Page hide and display function based on Lecture 9 example, Sample Code.html-->
+    <script>
+      function showContent(menuElement, theContent) {
+      // Hide everything
+      document.getElementById("content0").style.display="none";
+      document.getElementById("content1").style.display="none";
+      
+      // Remove "active" class
+      document.getElementById("menu0").className="none";
+      document.getElementById("menu1").className="none";
+      
+      // Show the one that was selected
+      document.getElementById(theContent).style.display="block";
+      document.getElementById(menuElement).className="active";
+      }
+      // Changes photo on hobbies page on mouseover
+      function flip(elementId, imageSrc){
+        document.getElementById(elementId).src=imageSrc
+      }
+      // Reverts photo on mouseleave
+      function flip_again(elementId, imageSrc){
+        document.getElementById(elementId).src=imageSrc
+      }
+
+      // Computes time dynamically 
+      function getTime(){
+        var today = new Date();
+
+        var hour = today.getHours();
+        if(hour<10)hour = "0"+hour;
+
+        var minute = today.getMinutes();
+        if(minute<10)minute = "0"+minute;
+
+        var second = today.getSeconds();
+        if(second<10)second = "0"+second;
+
+        document.getElementById("clock").innerHTML = hour + ":" + minute + ":" + second;
+        var noon = "photos/noon.png";
+        var sunrise = "photos/sunrise.png";
+        var sunset = "photos/sunset.png";
+        var night = "photos/night.png";
+        var icon;
+        if(hour>20){
+          document.getElementById("icon").src="photos/night.png" }
+        else if(hour>17){
+          document.getElementById("icon").src="photos/sunset.png"
+        }
+        else if(hour>9){
+          document.getElementById("icon").src="photos/noon.png"
+        }
+        else if(hour>5){
+          document.getElementById("icon").src="photos/sunrise.png"}
+        else{
+          document.getElementById("icon").src="photos/night.png"
+        }
+        
+        // Repeat every second
+        setTimeout("getTime()", 1000)
+      }
+
+    </script>
+    <!--Spacer to allow for scrolling full page-->
+    <div class="space">
+    </div>
+    <!--Footer-->
+    <nav id="footer" class="navbar fixed-bottom navbar-light bg-white" style="margin-top:10%">
+        <a class="text-muted" href="https://www.linkedin.com/in/anabel-reining/">LinkedIn</a>
+    </nav>
+  </body>
+</html>
+
